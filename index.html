@@ -412,7 +412,7 @@
 
                 // bind tooltip to feature
                 layer.bindTooltip("<div style='background:white; padding: 10px 5px 5px 5px'>" +
-                `<h2><b>${props["SiteName"]}</br><img src ="../images/comparison/${props['SiteID']}.1.jpg"/></b></h2>` + "</div>",
+                `<h2><b>${props["SiteName"]}</br><img src ="images/comparison/${props['SiteID']}.1.jpg"/></b></h2>` + "</div>",
                     {
                         direction: 'right',
 						permanent: false,
@@ -561,8 +561,8 @@
 
         new SliderBar({
             el: "#image-compare",
-            beforeImg: `../images/comparison/${imageId}.1.jpg`,
-            afterImg: `../images/comparison/${imageId}.2.jpg`,
+            beforeImg: `images/comparison/${imageId}.1.jpg`,
+            afterImg: `images/comparison/${imageId}.2.jpg`,
             //width: "90%",
             height: "75%",
             line: false
