@@ -331,10 +331,10 @@
     // global variables
 	const currentYear = 2022;
 
-    const ukPropertyData = $.getJSON("../data/uk_property.geojson");
-    const ukBuildingData = $.getJSON("../data/uk_buildings.geojson");
-    const ukParcelData = $.getJSON("../data/uk_parcel_ownership.geojson");
-    const ukPoiData = $.getJSON("../data/photo_locations.geojson");
+    const ukPropertyData = $.getJSON("data/uk_property.geojson");
+    const ukBuildingData = $.getJSON("data/uk_buildings.geojson");
+    const ukParcelData = $.getJSON("data/uk_parcel_ownership.geojson");
+    const ukPoiData = $.getJSON("data/photo_locations.geojson");
 
     $.when(ukPropertyData, ukBuildingData, ukParcelData, ukPoiData).done(function (ukProperty, ukBuilding, ukParcel, ukPoi) {
         console.log(ukProperty)
