@@ -17,6 +17,12 @@
     <!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Catamaran:600|Merriweather+Sans:300" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+   <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.css">
+     <link href="bootstrap.css" rel="stylesheet">
+<link href="bootstrap-switch.css" rel="stylesheet"> --> 
+
 <style>
     body { 
         background: #20282e;
@@ -233,6 +239,47 @@
         }
     }
 
+
+/* Use SCSS file from the repo to recompile with your theme or copy those lines to adjust theme */
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  color: #fff;
+  background: var(--primary);
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
+  background: var(--info);
+  color: #fff;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
+  background: var(--success);
+  color: #fff;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning {
+  background: var(--warning);
+  color: #fff;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -288,8 +335,10 @@
         University as a formal campus. Use this map to explore the history and growth of UK's main campus. </p2>-->
         <div id="switch" class="font-weight-bold">
         <!--<div class="form-check">--> 
+            <!--https://github.com/djibe/bootstrap-switch
+            https://www.cdnpkg.com/bootstrap-switch-->
 		<div class="custom-control custom-switch">
-			<input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+			<input type="checkbox" class="custom-control-input" data-toggle="toggle" id="customSwitch1" data-size="mini" checked>
 			<label class="custom-control-label" for="customSwitch1">Points of Interest*</label>
 		</div>
 		<div class="custom-control custom-switch">
@@ -330,7 +379,10 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
-
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.js" data-turbolinks-track="true"></script> 
+<script src="jquery.js"></script>
+<script src="bootstrap-switch.js"></script>-->
 <script>
 
 	// map options
@@ -468,6 +520,16 @@
             },
         }).addTo(map);
 
+       // https://gitbrent.github.io/bootstrap4-toggle/
+       // https://mdbootstrap.com/docs/b4/jquery/forms/switch/
+        $('#customSwitch1').bootstrapToggle({
+    		onSwitchChange: function (event, state) {
+        
+        	if(state) map.addLayer(poiLayer);
+        	else map.removeLayer(poiLayer);
+    		}
+			});
+            
         // call updateMap() function 
         updateMap(parcelLayer, currentYear);
 
