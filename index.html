@@ -25,7 +25,8 @@
 	h1 {
 		Font-Family: 'Catamaran', Sans-Serif;
 		font-weight: 800;
-		font-size: 1em;
+		font-size: 1.5em;
+        z-index: 2500;
 	}
 
 	h2 {
@@ -52,6 +53,11 @@
 		line-height: 1rem;
 		font-size: .9em;
 	}
+
+    p2 {
+        Font-Family: 'Merriweather Sans', Sans-Serif;
+        font-size: .8em;
+    }
 
     label {
 			font-size: 1em;
@@ -134,7 +140,7 @@
         /* Hidden by default */
         position: fixed;
         /* Stay in place */
-        z-index: 2500;
+        z-index: 2000;
         /* Sit on top */
         padding-top: 50px;
         /* Location of the box */
@@ -158,10 +164,6 @@
         display: block;
         width: 80%;
         max-width: 80%;
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.9);
-        /* Black w/ opacity */
     }
 
     /* Caption of Modal Image */
@@ -234,13 +236,44 @@
 </style>
 </head>
 <body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark shadow-5-strong py-0">
+        <a class="navbar-brand" href="#">History of Campus Expansion
+            <p class="font-weight-bold">University of Kentucky</p></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/jmfr236/uky-campus-expansion/blob/main/README.md">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://jmfr236.github.io/">Portfolio</a>
+              </li>
+        </ul>
+        </div>
+    </nav>
+
+<div class="px">
     <div id="map"></div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <!-- id="slider-example"-->
-            <div id="image-compare">
+            <div class="modal-header">
+                <h1 class="modal-title" id="modalLabel">Confirm</h1>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <!-- id="slider-example"-->
+                    <div id="image-compare">
+                    </div>
+                </div>    
+                <p>confirm</p>
             </div>
         </div>
         <span class="close" data-dismiss="modal">&times;</span>
@@ -248,9 +281,13 @@
     </div>
 
 	<!-- ui construction year date, and layer toggle -->
-	<div id='year' class="text-light font-weight-bold">
+	<div id='year' class="text-light">
 		<!-- <label><img src="graphics/dashed-line.png" width="20px" height="20px"> UK Property</br>-->
-		<!--<div class="form-check">--> 
+		<!--<p2>Even though the University of Kentucky (UK) was established in 1865, campus as it is known 
+        today was not acquired until 1880 when Fayette County gave the former fairground property to the 
+        University as a formal campus. Use this map to explore the history and growth of UK's main campus. </p2>-->
+        <div id="switch" class="font-weight-bold">
+        <!--<div class="form-check">--> 
 		<div class="custom-control custom-switch">
 			<input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
 			<label class="custom-control-label" for="customSwitch1">Points of Interest*</label>
@@ -266,6 +303,7 @@
         </br>
         <!-- ui construction year date -->
         <label>Year Display: <span>2022</span></label>
+    </div>
         <!-- ui slider element -->
         <div id="ui-controls" class="bg-light text-secondary font-weight-bold">
             <span class="min">1860</span>
@@ -567,7 +605,11 @@
             height: "75%",
             line: false
         });
+        
+        //document.getElementById('modalLabel');
+        //div.innerHTML += ;
     }
+
 
 </script>
 
