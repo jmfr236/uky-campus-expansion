@@ -523,8 +523,8 @@
        // https://gitbrent.github.io/bootstrap4-toggle/
        // https://mdbootstrap.com/docs/b4/jquery/forms/switch/
         $('#customSwitch1').bootstrapToggle({
-    		onSwitchChange: function (event, state) {
-        
+            onSwitchChange: function (event, state) {
+                console.log("bootstrapToggle")
         	if(state) map.addLayer(poiLayer);
         	else map.removeLayer(poiLayer);
     		}
