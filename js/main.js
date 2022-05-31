@@ -140,6 +140,8 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
 
       layer.on('click', function () {
         updateImageSlider(props['SiteID']);
+        // console.log(props['SiteID']);
+        $('#caption').html('Hey this is site id', props['SiteID']);
       });
     },
   }).addTo(map);
