@@ -1,5 +1,3 @@
-console.log('hi');
-
 // map options
 const options = {
   zoomSnap: 0.1,
@@ -148,12 +146,27 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
 
   // https://gitbrent.github.io/bootstrap4-toggle/
   // https://mdbootstrap.com/docs/b4/jquery/forms/switch/
-  $('#customSwitch1').bootstrapToggle({
-    onSwitchChange: function (event, state) {
-      console.log('bootstrapToggle');
-      if (state) map.addLayer(poiLayer);
-      else map.removeLayer(poiLayer);
-    },
+  //   $('#customSwitch1').bootstrapToggle({
+  //     on: 'Enabled',
+  //     off: 'Disabled',
+  //     // onSwitchChange: function (event, state) {
+  //     //   if (state) map.addLayer(poiLayer);
+  //     //   else map.removeLayer(poiLayer);
+  //     // }
+  //   });
+
+  const hiddenPoiLayer = L.layerGroup();
+  let poiVisible = true;
+  $('#customSwitch1').change(function () {
+    if (poiVisible) {
+      poiVisible = false;
+      hiddenPoiLayer.addLayer(poiLayer);
+      map.removeLayer(poiLayer);
+    } else {
+      poiVisible = true;
+      hiddenPoiLayer.removeLayer(poiLayer);
+      map.addLayer(poiLayer);
+    }
   });
 
   // call updateMap() function
