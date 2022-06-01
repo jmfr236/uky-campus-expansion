@@ -148,6 +148,8 @@ label {
     display: block;
     width: 80%;
     max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.0);
+    /* Black w/ opacity */
 }
 
 /* Caption of Modal Image */
@@ -157,7 +159,6 @@ label {
     width: 80%;
     max-width: 700px;
     text-align: left;
-    vertical-align: text-bottom;
     color: #ccc;
     padding: 10px 0;
     height: 150px;
