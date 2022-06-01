@@ -34,6 +34,10 @@ p {
     font-size: .9em;
 }
 
+a {
+    color:aquamarine;
+}
+
 .p2 {
     Font-Family: 'Merriweather Sans', Sans-Serif;
     font-size: .8em;
@@ -152,10 +156,12 @@ label {
     display: block;
     width: 80%;
     max-width: 700px;
-    text-align: center;
+    text-align: left;
+    vertical-align: text-bottom;
     color: #ccc;
     padding: 10px 0;
     height: 150px;
+    z-index: 2200;
 }
 
 #image-compare {
@@ -171,6 +177,7 @@ label {
     /* Full height */
     overflow: none;
     /* Enable scroll if needed */
+    z-index: 2000;
 }
 
 /* The Close Button */
@@ -181,6 +188,7 @@ label {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
+    z-index: 2300;
 }
 
 .close:hover,

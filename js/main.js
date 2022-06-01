@@ -140,12 +140,15 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
 
       layer.on('click', function () {
         updateImageSlider(props['SiteID']);
-        // console.log(props['SiteID']);
-        $('#caption').html('Hey this is site id', props['SiteID']);
+        console.log(props['SiteID']);
+        $('#caption').html(`<h2><b>${props['SiteName']}</b></h2>` + 
+          `<p>${props['HistoricDescription']}</p>` + 
+          `<h3>Image Source: <a href="${props['Link']}"> ${props['Link']}</a></h3` 
+          + props['Link']);
       });
     },
   }).addTo(map);
-
+// props['SiteID'], 
   // https://gitbrent.github.io/bootstrap4-toggle/
   // https://mdbootstrap.com/docs/b4/jquery/forms/switch/
   //   $('#customSwitch1').bootstrapToggle({
