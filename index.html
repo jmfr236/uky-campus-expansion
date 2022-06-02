@@ -18,13 +18,11 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Catamaran:600|Merriweather+Sans:300" rel="stylesheet">
 
+  <!-- Bootstrap Toggle css -->
   <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
     rel="stylesheet">
 
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.css">
-     <link href="bootstrap.css" rel="stylesheet">
-<link href="bootstrap-switch.css" rel="stylesheet"> -->
-
+  <!-- main file css-->
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -61,65 +59,63 @@
       <div class="modal-content">
         <!--<div class="modal-header">
           <h1 class="modal-title" id="modalLabel">Confirm</h1>
-      </div>-->
+        </div>-->
         <div class="modal-body">
           <div class="text-center">
             <div class="row">
-          <!-- id="slider-example"-->
-          <div id=container-fluid> 
-          <div id="image-compare"></div>
+            <!-- id="slider-example"-->
+            <div id=container-fluid> 
+              <div id="image-compare"></div>
             </div>
             </div>
             <br>
             <div class="row">
               <div id=container-fluid>
-              <div id="caption"></div>
+                <div id="caption"></div>
               </div>
             </div>
+          </div>
+        </div>
+        <span class="close" data-dismiss="modal">&times;</span>
       </div>
     </div>
-    <span class="close" data-dismiss="modal">&times;</span>
-
-  </div>
-  </div>
 
     <!-- ui construction year date, and layer toggle -->
-  <div id='ui_group' class="text-light">
+    <div id='ui_group' class="text-light">
     <!-- <label><img src="graphics/dashed-line.png" width="20px" height="20px"> UK Property</br>
         <p2>Even though the University of Kentucky (UK) was established in 1865, campus as it is known 
         today was not acquired until 1880 when Fayette County gave the former fairground property to the 
         University as a formal campus. Use this map to explore the history and growth of UK's main campus. </p2>-->
-    <div id="switch" class="font-weight-bold">
-      <!--<div class="form-check">-->
-      <!--https://github.com/djibe/bootstrap-switch
-            https://www.cdnpkg.com/bootstrap-switch-->
-      <div class="form-check pl-0">
-        <input type="checkbox" id="customSwitch1" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
-        <label class="form-check-label" for="customSwitch1">Points of Interest*</label>
-      </div>
-      <div class="form-check pl-0">
-        <input type="checkbox" id="customSwitch2" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
-        <label class="form-check-label" for="customSwitch2">Parcels</label>
-      </div>
-      <div class="form-check pl-0">
-        <input type="checkbox" id="customSwitch3" data-toggle="toggle" class="form-check-input" data-size="xs"checked>
-        <label class="form-check-label" for="customSwitch3">Buildings</label>
-      </div>
-      </br>
-      <!-- ui construction year date -->
-      <label>Year Display: <span>2022</span></label>
+      <!-- Layer Togglea -->
+        <div id="switch" class="font-weight-bold">
+        <!--<div class="form-check">-->
+        <!--https://github.com/djibe/bootstrap-switch
+              https://www.cdnpkg.com/bootstrap-switch-->
+        <div class="form-check pl-0">
+          <input type="checkbox" id="customSwitch1" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
+          <label class="form-check-label" for="customSwitch1">Points of Interest*</label>
+        </div>
+        <div class="form-check pl-0">
+          <input type="checkbox" id="customSwitch2" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
+          <label class="form-check-label" for="customSwitch2">Parcels</label>
+        </div>
+        <div class="form-check pl-0">
+          <input type="checkbox" id="customSwitch3" data-toggle="toggle" class="form-check-input" data-size="xs"checked>
+          <label class="form-check-label" for="customSwitch3">Buildings</label>
+        </div>
+        <br>
+        <!-- ui construction year date -->
+        <label>Year Display: <span>2022</span></label>
+        </div>
+        <!-- ui slider element -->
+        <div id="ui-controls" class="bg-light text-secondary font-weight-bold">
+          <span class="min">1860</span>
+          <span class="max">2022</span>
+          <input type="range" min="1860" , max="2022" , value="2022" , step="1" class="year-slider"></input>
+        </div>
+      <h3>*Points of Interest are not filtered by the date slider</h3>
     </div>
-    <!-- ui slider element -->
-    <div id="ui-controls" class="bg-light text-secondary font-weight-bold">
-      <span class="min">1860</span>
-      <span class="max">2022</span>
-      <input type="range" min="1860" , max="2022" , value="2022" , step="1" class="year-slider"></input>
-    </div>
-    <h3>*Points of Interest are not filtered by the date slider</h3>
   </div>
-  </div>
-
-
 
   <!-- jQuery first and the minified version from jQuery site, not the slim minified version from Bootstrap's site. -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -137,9 +133,13 @@
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
+
+  <!-- then Bootstrap Toggle JS -->
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+  <!-- then main file js -->
   <script src="js/main.js"></script>
+
 </body>
 
 </html>

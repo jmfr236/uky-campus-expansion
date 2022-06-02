@@ -102,7 +102,7 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
     },
   }).addTo(map);
 
-    // trigger toggle action to add/remove layer
+  // trigger toggle action to add/remove layer
   const hiddenBuildingLayer = L.layerGroup();
   let buildingVisible = true;
   $('#customSwitch3').change(function () {
@@ -321,6 +321,7 @@ function updateYear(parcelLayer, currentYear) {
   });
 } // end updateYear()
 
+// select image and text based on site ID
 function updateImageSlider(imageId) {
   console.log(imageId);
 
@@ -334,7 +335,4 @@ function updateImageSlider(imageId) {
     height: '75%',
     line: false,
   });
-
-  //document.getElementById('modalLabel');
-  //div.innerHTML += ;
 }
