@@ -74,6 +74,21 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
     },
   }).addTo(map);
 
+  // trigger toggle action to add/remove layer
+  const hiddenParcelLayer = L.layerGroup();
+  let parcelVisible = true;
+  $('#customSwitch2').change(function () {
+    if (parcelVisible) {
+      parcelVisible = false;
+      hiddenParcelLayer.addLayer(parcelLayer);
+      map.removeLayer(parcelLayer);
+    } else {
+      parcelVisible = true;
+      hiddenParcelLayer.removeLayer(parcelLayer);
+      map.addLayer(parcelLayer);
+    }
+  });
+
   // set building layer style and add to map
   const buildingLayer = L.geoJson(ukBuilding, {
     style: function (feature) {
@@ -86,6 +101,21 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
       };
     },
   }).addTo(map);
+
+    // trigger toggle action to add/remove layer
+  const hiddenBuildingLayer = L.layerGroup();
+  let buildingVisible = true;
+  $('#customSwitch3').change(function () {
+    if (buildingVisible) {
+      buildingVisible = false;
+      hiddenBuildingLayer.addLayer(buildingLayer);
+      map.removeLayer(buildingLayer);
+    } else {
+      buildingVisible = true;
+      hiddenBuildingLayer.removeLayer(buildingLayer);
+      map.addLayer(buildingLayer);
+    }
+  });
 
   // set property layer style and add to map
   const propertyLayer = L.geoJson(ukProperty, {
@@ -148,18 +178,11 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
       });
     },
   }).addTo(map);
-// props['SiteID'], 
+
   // https://gitbrent.github.io/bootstrap4-toggle/
   // https://mdbootstrap.com/docs/b4/jquery/forms/switch/
-  //   $('#customSwitch1').bootstrapToggle({
-  //     on: 'Enabled',
-  //     off: 'Disabled',
-  //     // onSwitchChange: function (event, state) {
-  //     //   if (state) map.addLayer(poiLayer);
-  //     //   else map.removeLayer(poiLayer);
-  //     // }
-  //   });
 
+  // trigger toggle action to add/remove layer
   const hiddenPoiLayer = L.layerGroup();
   let poiVisible = true;
   $('#customSwitch1').change(function () {
