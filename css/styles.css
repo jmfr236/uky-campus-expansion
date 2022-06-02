@@ -18,7 +18,8 @@ h2 {
 h3 {
     Font-Family: 'Merriweather Sans', Sans-Serif;
     font-size: .7em;
-    font-style: italic
+    font-style: italic;
+    
 }
 
 h4 {
@@ -44,7 +45,9 @@ a {
 }
 
 label {
-        font-size: 1em;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 60%;
     }
 
 #map { 
@@ -71,18 +74,21 @@ label {
     background-color: rgba(0, 0, 0, 0.4);
     border: 0px solid #000;
     color: #000;
-    white-space: nowrap;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    word-wrap: normal;
+    white-space: normal;
+    max-width:300px;
+    width: 250px;
 }
 
 .leaflet-tooltip img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 230px;
+    max-height: 230px;
     padding: 7.5px;
 }
 
