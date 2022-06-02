@@ -296,8 +296,8 @@ function updateYear(parcelLayer, currentYear) {
 
   //When added to the map
   yearControl.onAdd = function (map) {
-    // select an existing DOM element with an id of "year"
-    var controls = L.DomUtil.get('year');
+    // select an existing DOM element with an id of "ui_group" section
+    var controls = L.DomUtil.get('ui_group');
 
     // disable scrolling of map while using controls
     L.DomEvent.disableScrollPropagation(controls);
@@ -316,7 +316,7 @@ function updateYear(parcelLayer, currentYear) {
   $('.year-slider').on('input change', function () {
     // when user changes
     const currentYear = $(this).val(); // update the year
-    $('#year label span').html(currentYear); // update the map with current timestamp
+    $('#ui_group label span').html(currentYear); // update the map with current timestamp
     updateMap(parcelLayer, currentYear); // update timestamp in legend heading
   });
 } // end updateYear()
