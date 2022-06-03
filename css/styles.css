@@ -83,12 +83,12 @@ label {
     word-wrap: normal;
     white-space: normal;
     max-width:300px;
-    width: 250px;
+    width: 240px;
 }
 
 .leaflet-tooltip img {
-    max-width: 230px;
-    max-height: 230px;
+    max-width: 220px;
+    max-height: 220px;
     padding: 7.5px;
 }
 
