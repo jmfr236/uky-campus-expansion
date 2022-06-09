@@ -1,4 +1,4 @@
-# UK Campus Expansion | Historic Parcel Acquisition
+# Experience the History and Expansion of UK Campus | University of Kentucky
 <!--a history of campus expansion-->
 <!-- TOC -->
 
@@ -6,7 +6,9 @@
   - [II. Methodology](#ii-methodology)
     - [A. Data & Processing](#a-data--processing)
     - [B. Design - Application Layout](#b-design---application-layout)
+    - [C. Technology Stack](#c-technology-stack)
   - [III. Conclusion](#iii-conclusion)
+  - [IV. References](#iv-references)
 
 <!-- /TOC -->
 
@@ -67,7 +69,10 @@ This project compiles multiple data sources to develop a unique data set that co
 (UK ITS Information Services - Geospatial & UK Libraries - Explore UK)
   - Selected historic photos of UK campus from https://exploreuk.uky.edu/ that could be recaptured today (Rephotography) 
   - Identified locations in historic photos based on key landmarks
-  - Photos edited using Adobe Photoshop
+  - Photos edited using Adobe Photoshop, sized to 2500 px, and exported as jpg files
+  - Completed research for each point, see [References](#iv-references) for more details
+  
+![Rephotography snapshot of Tayler Education Building](images\rephotography_snapshot.jpg)
 
 ### B. Design - Application Layout
 Create a full screen interactive map that will allow users to explore the history of campus expansion and relive history through various points of interest on campus. The map will include three separate layers: Parcels, Buildings, and Points of Interest (POI). 
@@ -83,9 +88,33 @@ User Interaction includes:
 
 ![Interactive Parcel Ownership Map](images/parcelownership_wireframe.jpg)
 
+### C. Technology Stack
+- CSS/HTML/Javascript
+- Google Font Library
+- Leaflet JS
+- jQuery 
+  - jQuery Slider Bundle Plugin
+- Bootstrap
+  - Bootstrap Toggle Plugin
+
 ## III. Conclusion
 
 Provide a brief (one or two paragraphs) statement to conclude the proposal. This will likely be restating what you said in the introduction, but also (re)consider the format we used in the first assignment (a topic with a motivating question).
+
+## IV. References
+
+- "Explore the University of Kentucky." Kentucky Historical Society: Explore KY History, https://explorekyhistory.ky.gov/tours/show/8. Accessed 2022.
+
+- Hale, Whitney. "Sesquicentennial Stories: UK's 'New' Dorm." UK College of Arts & Sciences: Modern & Classical Languages, Literatures & Culture, May 1, 2013, https://mcl.as.uky.edu/sesquicentennial-stories-uks-new-dorm.
+
+- "Old Blue". UK Libraries Special Collections Research Center, April , 30, 2009, https://ukyarchives.blogspot.com/2009/04/old-blue.html.
+
+- "Past Men's Basketball Venues: Alumni Gym." UK Athletics, https://ukathletics.com/sports/2018/9/6/past-mens-basketball-venues-alumni-gym.aspx. Accessed 2022. 
+
+- Thompson, Weston T., and Terry L. Birdwhistell. "The University of Kentucky: A Look Back."  UK Libraries: Special Collections Research Center, 1998, https://libraries.uky.edu/libpage.php?lweb_id=319&llib_id=13.
+
+- "University of Kentucky Army ROTC History." UK College of Arts & Sciences: Army ROTC, https://armyrotc.as.uky.edu/university-kentucky-army-rotc-history. Accessed 2022. 
+
 
 
 NOTES: 
