@@ -57,7 +57,7 @@ This project compiles multiple data sources to develop a unique data set that co
   - "Georeferenced" converted CAD data to the UK Campus Basemap using the Geoprocessing ArcPro Tool 'Transform Features'- created links between the converted CAD data and GIS campus basemap (see images below)
   - Converted georeferenced CAD Annotations to a point feature class using the Geoprocessing ArcPro Tool 'Feature to Point' 
   
-  ![Historic CAD source](images\autocad_screenshot.jpg)
+  ![Historic CAD source](images/autocad_screenshot.jpg)
   ![Historic CAD data converted to GIS](images/CAD_to_GIS_Links.jpg)
   ![Historic parcel data overlaid GIS for feature development](images/Transform_Links.jpg)
 
