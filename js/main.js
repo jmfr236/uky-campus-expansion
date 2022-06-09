@@ -332,7 +332,7 @@ function updateImageSlider(imageId) {
     beforeImg: `images/comparison/${imageId}.1.jpg`,
     afterImg: `images/comparison/${imageId}.2.jpg`,
     //width: "90%",
-    height: '75%',
+    //height: '75%',
     line: false,
   });
 }
