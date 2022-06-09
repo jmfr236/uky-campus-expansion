@@ -171,10 +171,12 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
       layer.on('click', function () {
         updateImageSlider(props['SiteID']);
         console.log(props['SiteID']);
-        $('#caption').html(`<h2><b>${props['SiteName']}</b></h2>` + 
-          `<p>${props['HistoricDescription']}</p>` + 
-          `<h3>Image Source: <a href="${props['Link']}"> ${props['Link']}</a></h3` 
-          + props['Link']);
+        $('#caption').html(
+          `<h2><b>${props['SiteName']}</b></h2>` +
+            `<p>${props['HistoricDescription']}</p>` +
+            `<h3>Image Source: <a href="${props['Link']}"> ${props['Link']}</a></h3` +
+            props['Link']
+        );
       });
     },
   }).addTo(map);
@@ -331,8 +333,8 @@ function updateImageSlider(imageId) {
     el: '#image-compare',
     beforeImg: `images/comparison/${imageId}.1.jpg`,
     afterImg: `images/comparison/${imageId}.2.jpg`,
-    //width: "90%",
-    height: '75%',
+    // width: '60%',
+    // height: '60%',
     line: false,
   });
 }

@@ -172,15 +172,15 @@ label {
 }
 
 #image-compare {
-    position: fixed;
+    /* position: fixed; */
     /* Stay in place */
-    padding-top: 50px;
+    /* padding-top: 50px; */
     /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
+    /* left: 0;
+    top: 0; */
+    /* width: 60%; */
     /* Full width */
-    height: 100%;
+    height: 75vh;
     /* Full height */
     overflow: none;
     /* Enable scroll if needed */

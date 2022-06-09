@@ -61,14 +61,14 @@
         <h1 class="modal-title" id="modalLabel">Confirm</h1>
         </div>-->
         <div class="modal-body">
-          <div class="row">
-            <!-- id="slider-example"-->
-            <div id="image-compare"></div>
-          </div>
-            <!-- id="slider-example"-->
-          <div class="row">
-            <div id="caption"></div>
-          </div>
+
+          <!-- id="slider-example"-->
+          <div id="image-compare"></div>
+
+          <!-- id="slider-example"-->
+
+          <div id="caption"></div>
+
         </div>
       </div>
       <span class="close" data-dismiss="modal">&times;</span>
@@ -76,38 +76,41 @@
 
     <!-- ui construction year date, and layer toggle -->
     <div id='ui_group' class="text-light">
-    <!-- <label><img src="graphics/dashed-line.png" width="20px" height="20px"> UK Property</br>
+      <!-- <label><img src="graphics/dashed-line.png" width="20px" height="20px"> UK Property</br>
         <p2>Even though the University of Kentucky (UK) was established in 1865, campus as it is known 
         today was not acquired until 1880 when Fayette County gave the former fairground property to the 
         University as a formal campus. Use this map to explore the history and growth of UK's main campus. </p2>-->
       <!-- Layer Togglea -->
-        <div id="switch" class="font-weight-bold">
+      <div id="switch" class="font-weight-bold">
         <!--<div class="form-check">-->
         <!--https://github.com/djibe/bootstrap-switch
               https://www.cdnpkg.com/bootstrap-switch-->
         <div class="form-check pl-0">
-          <input type="checkbox" id="customSwitch1" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
+          <input type="checkbox" id="customSwitch1" data-toggle="toggle" class="form-check-input" data-size="xs"
+            checked>
           <label class="form-check-label" for="customSwitch1">Points of Interest*</p></label>
         </div>
         <div class="form-check pl-0">
-          <input type="checkbox" id="customSwitch2" data-toggle="toggle" class="form-check-input" data-size="xs" checked>
+          <input type="checkbox" id="customSwitch2" data-toggle="toggle" class="form-check-input" data-size="xs"
+            checked>
           <label class="form-check-label" for="customSwitch2">Parcels</label>
         </div>
         <div class="py-1"></div>
         <div class="form-check pl-0">
-          <input type="checkbox" id="customSwitch3" data-toggle="toggle" class="form-check-input" data-size="xs"checked>
+          <input type="checkbox" id="customSwitch3" data-toggle="toggle" class="form-check-input" data-size="xs"
+            checked>
           <label class="form-check-label" for="customSwitch3">Buildings</label>
         </div>
         <br>
         <!-- ui construction year date -->
         <label>Year Display: <span>2022</span></label>
-        </div>
-        <!-- ui slider element -->
-        <div id="ui-controls" class="bg-light text-secondary font-weight-bold">
-          <span class="min">1880</span>
-          <span class="max">2022</span>
-          <input type="range" min="1880" , max="2022" , value="2022" , step="1" class="year-slider"></input>
-        </div>
+      </div>
+      <!-- ui slider element -->
+      <div id="ui-controls" class="bg-light text-secondary font-weight-bold">
+        <span class="min">1880</span>
+        <span class="max">2022</span>
+        <input type="range" min="1880" , max="2022" , value="2022" , step="1" class="year-slider"></input>
+      </div>
       <h3>*Points of Interest are not filtered by the date slider</h3>
     </div>
   </div>
