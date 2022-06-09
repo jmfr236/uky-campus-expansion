@@ -72,7 +72,7 @@ This project compiles multiple data sources to develop a unique data set that co
   - Photos edited using Adobe Photoshop, sized to 2500 px, and exported as jpg files
   - Completed research for each point, see [References](#iv-references) for more details
   
-![Rephotography snapshot of Tayler Education Building](images\rephotography_snapshot.jpg)
+![Rephotography snapshot of Taylor Education Building](images\rephotography_snapshot.jpg)
 
 ### B. Design - Application Layout
 Create a full screen interactive map that will allow users to explore the history of campus expansion and relive history through various points of interest on campus. The map will include three separate layers: Parcels, Buildings, and Points of Interest (POI). 
