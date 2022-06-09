@@ -93,3 +93,39 @@ NOTES:
 https://www.re.photos/en/ 
 
 https://libraries.uky.edu/libpage.php?lweb_id=311&llib_id=13
+
+Recommended (15 min) presentation format for students:
+
+Introduce your topic and your motivation for the project. Begin with a screen share of your GitHub repository and rely on this as visuals as you discuss your project. Demonstrate the GitHub repo project documentation. I recommend not creating additional Powerpoint slides as it can become awkward switching between slides and your project (minutes 1 - 3 ). You can return to your GitHub documentation throughout your talk.
+
+Describe your target user and their motivations/objectives for using the map (minutes 3 - 4). Show your mockups, talk about your creative process.
+
+Discuss the data (source, quality, and concerns) and your data wrangling process. Show off your Python scripting within the Jupyter notebook (minutes 4 - 6). Don't go overly into the details of the coded cells, but quickly scroll through a notebook (or two) and talk about how that process helped you gain more of an understanding of the data and now provides for transparency and reproducibility in the data pipeline (minutes 8 - 9).
+
+Walk us through a live use case scenario using the map. Return to the target user. Explain the various interface components and how the user will employ them to fulfill their objectives. Discuss any insights or questions raised through visualizing the data within a map (minutes 9 - 12).
+
+Conclude with any features, functionality, or design aspects you'd like to attend to or improve upon for the final week (a "wish list"). Also discuss any new or unresolved questions in the data-to-web map pipeline. Where do you go from here? (minutes 12 - 15)
+
+Pitch your presentation toward a general academic audience:
+- Define technical terms and technologies, especially before you start to use them.
+- Assume nothing is obvious, especially technical terms.
+- If you show code or technical output, don’t go into detail. Use it as a visual while you explain the higher-level process or solution it refers to.
+  
+Structure the parts of your presentation with signposting:
+- Tell the user what you’re going to tell them
+- Tell it to them, and 
+- then tell them what you just told them. 
+- E.g., “I am first going to introduce the topic of my map and explain the anticipated user’s motivations and objectives for using the map … bla bla bla bla … I just told you about the subject matter of my map and the user’s motivations and objectives. Now I’m going to demonstrate the map and user interface … bla bla bla … I just demonstrated the map and the user interface. Now I’m going to describe the data process and show you how I used Jupyter Notebooks to gain insights and wrangle the data.”
+
+How to end your presentation:
+- Return to the beginning and gesture toward broader impact. E.g., “This concludes my presentation about my mapping project focused on X. My project allows us to better understand Y phenomena in a spatial sense and users can do Z after engaging with the map.”
+- Conclude with a humorous/humanizing statement or image. E.g., “I’d like to thank my husband for enduring countless hours of me cursing and throwing things while debugging this map, and my doggo for not chewing through the power cords of my computer.”
+
+TIPS
+
+Slow down and take your time. No need to try to rush through every detail of your map.
+Scroll through a web page or README.md file of your repo slowly.
+If pointing out something specific, give the audience time to look at the map element/Notebook cell/etc.
+Demonstrate map user interaction slowly and avoid clicking around too quickly.
+When changing between browser windows or screens, pause before doing so. Let the audience know what you’re doing. E.g., “I’m now going to switch back to the map to demonstrate X.”
+When demoing the map or Jupyter notebook, emphasize insights from the data revealed through the visual representation and interaction. Tell the audience what they’re looking at. E.g., “Here you can see some outliers in the data, which should either be scrubbed or require further investigation.”
