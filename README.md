@@ -13,9 +13,14 @@
 
 <!-- /TOC -->
 
+![Original Campus](images/original_campus.jpg)
+
 ## I. Introduction
 
-The University of Kentucky (UK) was founded in 1865 as a Land-Grant Institution. The original campus was located at the Ashland Estate, the University did not move to its current location until 1880. UK opened at its current location in 1882 with three buildings (Administration Building, White Hall Dormitory, and President Patterson House - White Hall and Patterson House were demolished in the 1960's for the development of Patterson Office Tower and White Hall Classroom Building). Since then the UK Lexington Main Campus has grown to xxxxx building xxxx acres. 
+The University of Kentucky (UK) was founded in 1865 as a Land-Grant Institution. The original campus was located at the Ashland Estate, the University did not move to its current location until the 1880s. UK opened at its current location in 1882 with three buildings (Administration Building, White Hall Dormitory, and President Patterson House - White Hall and Patterson House were demolished in the 1960's for the development of Patterson Office Tower and White Hall Classroom Building). Since then the UK Lexington Main Campus has grown to xxxxx building xxxx acres. 
+
+![Historic CAD source](images/ashland_campus.jpg)
+  **[[University of Kentucky historical map, showing the Ashland and Limestone campuses from 1862-1882](https://exploreuk.uky.edu/catalog/xt7rn872zc2f)**
 
 In my current position with the University of Kentucky - ITS Information Services, I work closely with UK Facilities Management and their datasets. Our department has identified a need for historic parcel/plat data to be digitized and made available in an easy to use map environment. This is something our department has wanted to complete for a while, but have not been able to get funding to support the development. 
 
@@ -108,7 +113,7 @@ User Interaction includes:
 
 Provide a brief (one or two paragraphs) statement to conclude the proposal. This will likely be restating what you said in the introduction, but also (re)consider the format we used in the first assignment (a topic with a motivating question).
 
-In the future I would like to have buildings update with the parcel time slider. We have all the information to achieve this but the pop-ups between the parcel and building polygons conflict with each other and at some points will not allow you to select smaller parcels under buildings. I would also like to add a Road Ownership layer. Lastly improve the for mobile use, I would like the image modal content to adjust dynamically with screen sizes. 
+In the future I would like to have buildings update with the parcel time slider. We have all the information to achieve this but the pop-ups between the parcel and building polygons conflict with each other and at some points will not allow you to select smaller parcels under buildings. I am considering removing pop-ups from the parcel data and adding pop-ups for the buildings. THe general public would not find the parcel details valuable, only valuable for FM personnel. I would also like to add a Road Ownership layer. Lastly improve the for mobile use, I would like the image modal content to adjust dynamically with screen sizes. Create a scrollable story map with a some background information and discuss the importance of parcel data.
 
 ## IV. References
 
