@@ -136,17 +136,17 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
     style: function (feature) {
       return {
         color: '#DA9517',
-        opacity: 0.9,
-        weight: 2,
+        opacity: .8,
+        weight: 2.5,
         pane: 'poiLayer',
       };
     },
     pointToLayer: function (feature, latlng) {
       return L.circleMarker(latlng, {
-        radius: 3.5,
+        radius: 4.5,
         fillColor: '#EEB902',
-        fillOpacity: 0.8,
-        weight: 1,
+        fillOpacity: 0.9,
+        weight: 1.5,
       });
     },
     onEachFeature: function (feature, layer) {
@@ -217,7 +217,7 @@ function updateMap(parcelLayer, currentYear) {
         color: '#20282e',
         weight: 1,
         opacity: 0.5,
-        fillOpacity: 0.75,
+        fillOpacity: 0.5,
         fillColor: '#1E8AFF',
       });
 
@@ -229,7 +229,7 @@ function updateMap(parcelLayer, currentYear) {
         <b>Deed Date: </b> ${props['Deed_Date']}<br/>
         <b>Original Deed Address: </b> ${props['Deed_Alternate_Name']}<br/><br/>
         <small>PVA Number: ${props['PVANUM']}<br/>
-        PVA Address: ${props['ADDRESS']}</p>` +
+        PVA Address: ${props['Deed_Address']}</p>` +
           '</div>',
         {
           direction: 'right',
@@ -258,7 +258,7 @@ function updateMap(parcelLayer, currentYear) {
           color: '#20282e',
           weight: 1,
           opacity: 0.5,
-          fillOpacity: 0.75,
+          fillOpacity: 0.5,
           fillColor: '#1E8AFF',
         });
       });
