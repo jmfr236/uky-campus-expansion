@@ -172,7 +172,7 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
         updateImageSlider(props['SiteID']);
         console.log(props['SiteID']);
         $('#caption').html(`<h2><b>${props['SiteName']}</b></h2>` + 
-          `<p>${props['HistoricDescription']}</p>` + 
+          `<p>${props['Comment']}</p>` + 
           `<h3>Image Source: <a href="${props['Link']}"> ${props['Link']}</a></h3` 
           + props['Link']);
       });
