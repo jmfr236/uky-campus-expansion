@@ -57,7 +57,6 @@ This project combines modern PVA parcel data with historic UK property acquisiti
   - Original data was developed using existing deed and plat information - NOT SURVEY QUALITY 
   - Parcel attributes were taken from the deeds and/or existing subdivision plats
   - Data is not complete and only shows parcels as described when they were conveyed to UK and does not show subsequent sales for road widening, easements, etc.
-  
   ![Historic CAD source](images/autocad_screenshot.jpg)
 
 **UK Parcel Acquisition Data (NEW DATASET)**
