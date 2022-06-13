@@ -173,8 +173,8 @@ function drawMap(ukProperty, ukBuilding, ukParcel, ukPoi) {
         console.log(props['SiteID']);
         $('#caption').html(`<h2><b>${props['SiteName']}</b></h2>` + 
           `<p>${props['Comment']}</p>` + 
-          `<h3>Image Source: <a href="${props['Link']}"> ${props['Link']}</a></h3` 
-          + props['Link']);
+          `<h3>Image Source: <a href="${props['Link']}" target="_blank"> ${props['Link']}</a></h3>` +
+          `<h3><a href="https://github.com/jmfr236/uky-campus-expansion/blob/main/README.md#iv-references" target="_blank">See References</a></h3>`);
       });
     },
   }).addTo(map);

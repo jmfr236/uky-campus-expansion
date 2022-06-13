@@ -117,11 +117,33 @@ In the future I would like to have buildings update with the parcel time slider.
 
 ## IV. References
 
+- "Ann Rice O'Hanlon & The Memorial Hall Mural: Memorial Hall." UK Libraries: Research Guides, https://libguides.uky.edu/c.php?g=436963&p=3100156. Accessed 2022. 
+
+- "A Student's View of Campus Then & Now." UK Libraries: Special Collections Research Center, https://ukyscrcexhibits.omeka.net/exhibits/show/studentcampus. Accessed 2022.
+
+- "College of Education History." UK College of Education, https://education.uky.edu/history/. Accessed 2022. 
+
+- "Commonwealth Stadium." UK Athletics, https://ukathletics.com/sports/2015/8/2/_131472192333808916.aspx. Accessed 2022
+
 - "Explore the University of Kentucky." Kentucky Historical Society: Explore KY History, https://explorekyhistory.ky.gov/tours/show/8. Accessed 2022.
 
-- Hale, Whitney. "Sesquicentennial Stories: UK's 'New' Dorm." UK College of Arts & Sciences: Modern & Classical Languages, Literatures & Culture, May 1, 2013, https://mcl.as.uky.edu/sesquicentennial-stories-uks-new-dorm.
+- Hale, Whitney. "Sesquicentennial Series: A Place of Observation." UK College of Arts & Sciences: Physics & Astronomy, November 25, 2013, https://pa.as.uky.edu/sesquicentennial-series-place-observation.
 
-- "Old Blue". UK Libraries Special Collections Research Center, April , 30, 2009, https://ukyarchives.blogspot.com/2009/04/old-blue.html.
+- Hale, Whitney. "Sesquicentennial Stories: A Monumental Track" UK College of Arts & Sciences, May 21, 2013, https://www.as.uky.edu/sesquicentennial-stories-monumental-track. 
+
+- Hale, Whitney. "Sesquicentennial Stories: UK's 'New' Dorm." UK College of Arts & Sciences: Modern & Classical Languages, Literatures & Culture, May 1, 2013, https://mcl.as.uky.edu/sesquicentennial-stories-uks-new-dorm. Accessed 2022.
+
+- Harder, Whitney. "Cooperstown Makes its Mark in UK History." UKNOW - University of Kentucky News, November 13, 2014, https://uknow.uky.edu/campus-news/cooperstown-makes-its-mark-uk-history. 
+
+- "History of the President's Residence, Maxwell Place." UK Office of the President, https://pres.uky.edu/history-maxwell-place-presidents-residence. Accessed 2022.
+
+- Jones-Timoney, Amy, and Kody Kiser. "VIDEO: E.S. Good Barn Connects UK Campus With the Commonwealth." UKNOW - University of Kentucky News, January 20, 2015, https://uknow.uky.edu/campus-news/video-es-good-barn-connects-uk-campus-commonwealth.
+
+- "Mathews family papers." UK Libraries: Special Collections Research Center, https://exploreuk.uky.edu/fa/findingaid/?id=xt76q52f925g. Accessed 2022. 
+
+- Nielson, Aimee. "Historic Cooper House." Issuu: College of Agriculture, Food and Environment Alumni Association, July 2021, https://issuu.com/aghesalumniassociation/docs/july_2021_ambassador_issuu/s/12678228. 
+
+- "Old Blue". UK Libraries Special Collections Research Center, April, 30, 2009, https://ukyarchives.blogspot.com/2009/04/old-blue.html.
 
 - "Past Men's Basketball Venues: Alumni Gym." UK Athletics, https://ukathletics.com/sports/2018/9/6/past-mens-basketball-venues-alumni-gym.aspx. Accessed 2022. 
 
@@ -131,11 +153,6 @@ In the future I would like to have buildings update with the parcel time slider.
 
 
 
-NOTES: 
-
-https://www.re.photos/en/ 
-
-https://libraries.uky.edu/libpage.php?lweb_id=311&llib_id=13
 
 Recommended (15 min) presentation format for students:
 
