@@ -17,17 +17,17 @@
 
 ## I. Introduction
 
-The University of Kentucky (UK) was founded in 1865 as a Land-Grant Institution. The original campus was located at the Ashland Estate, the University did not move to its current location until the 1880s. UK opened at its current location in 1882 with three buildings (Administration Building, White Hall Dormitory, and President Patterson House - White Hall and Patterson House were demolished in the 1960's for the development of Patterson Office Tower and White Hall Classroom Building). Since then the UK Lexington Main Campus has grown to xxxxx building xxxx acres. 
+The University of Kentucky was founded in 1865. The original campus however was actually at the Ashland, the University did not move to its current location off of Nicholasville and Avenue of Champions until the 1880s. Ashland was sold to the John Bryan Bowman (founder of Kentucky University and Agricultural and Mechanical College of Kentucky) as a campus for the University in 1864, the wife of James B. Clay (son of Henry Clay) could no longer afford to stay at Ashland after her husband passed. 
+
+UK separated from the private Kentucky University (Transylvania University today) to become a public institution under the Morrill Land Grant in 1865. Once UK separated they needed to obtain a campus, there was a state wide bidding war for the University to move to their cities. To encourage UK to stay in Lexington, Fayette County offered $20,000 and the city offered $30,000 and a large fairground (original campus). The university's permanent location was declared Lexington in 1880, and construction of the original campus began. Campus as it is known today opened in 1882 with three buildings: Main Building, White Hall Dormitory, and President Patterson's House. The main building is the only original structures still standing, White Hall Dormitory at Patterson House were demolished for the construction of Patterson Office Tower and White Hall Classroom Building in the 1960s. Since main campus opened there have been major changes to the campus landscape, and campus continues to acquire property for further expansion. 
 
 ![Historic CAD source](images/ashland_campus.jpg)
   **[[University of Kentucky historical map, showing the Ashland and Limestone campuses from 1862-1882](https://exploreuk.uky.edu/catalog/xt7rn872zc2f)**
 
-In my current position with the University of Kentucky - ITS Information Services, I work closely with UK Facilities Management and their datasets. Our department has identified a need for historic parcel/plat data to be digitized and made available in an easy to use map environment. This is something our department has wanted to complete for a while, but have not been able to get funding to support the development. 
-
-I am proposing to design an interactive map that will allow users to easily search and view University of Kentucky owned parcels. There is not a single location for this data. Finding additional information requires digging through deed books and various documents. More recent parcel data can be obtained from the LFUCG PVA; but older sections of campus have been merged into large parcels, instead of the original parcel size they were purchased at. Some historic data is currently in a CAD DWG, which would need to be geospatially referenced and digitized. Another pressing need is that the CAD document is maintained by a single person. With many folks retiring, it is important that a resource is available before the 'keeper' of this data retires. I want to design a map that explores historic parcel ownership/purchases of the University of Kentucky on the Lexington main campus. Important to identify when the University of Kentucky purchased specific parcels on main campus, from who (person, organization, etc.), and the original size. 
+In my current position with UK Information Services group, I work closely with Facilities Management and Library datasets. Prior to development of this interactive map, older property deed details were fairly inaccessible and could only be located by searching through physical deeds in the Facilities Library. More recent parcel data can be obtained from LFUCG PVA; but the PVA merged older sections of campus into large parcels, instead of showing the original parcel size the property was purchased at. We have some historic parcel data in a CAD DWG document that was being maintained by an individual in Facilities Management, but it is not in an easily accessible format or location. As a part of this project I geospatially referenced and digitized the data from the CAD document so it could be used as a layer for this interactive map. I created this map to allow users to easily explore UK parcel details and how campus has grown, while also examining how the campus landscape has changed over the decades through rephotography images. 
 
 ## II. Methodology
-This project compiles multiple data sources to develop a unique data set that combines modern parcels data and historic UK property acquisitions. UK basemap features were provided from **[UK ITS Information Services - Geospatial](https://www.uky.edu/gissupport/sites/www.uky.edu.gissupport/files/Campus_Feature_Descriptions_0.pdf )**. Historic UK parcel data was provided by UK Facilities Management & UK ITS Information Services - Facilities Library. Modern Fayette County Parcel Data was sourced from **[Lexington Fayette Urban County Government (LFUCG)](https://data-lfucg.hub.arcgis.com/datasets/e4a525d8772741468205e82fc173db22_0/about)**. Points of Interest are based on selected historic photos of UK campus from UK Libraries **[Explore UKY](https://exploreuk.uky.edu/)**. 
+This project combines modern PVA parcel data with historic UK property acquisitions to develop a unique dataset.  UK basemap features were provided from **[UK ITS Information Services - Geospatial](https://www.uky.edu/gissupport/sites/www.uky.edu.gissupport/files/Campus_Feature_Descriptions_0.pdf )**. Historic UK parcel data was provided by UK Facilities Management & UK ITS Information Services - Facilities Library. Modern Fayette County Parcel Data was sourced from **[Lexington Fayette Urban County Government (LFUCG)](https://data-lfucg.hub.arcgis.com/datasets/e4a525d8772741468205e82fc173db22_0/about)**. Points of Interest are based on selected historic photos of UK campus from UK Libraries **[Explore UKY](https://exploreuk.uky.edu/)**. Additional information about the data and processing methods can be found below.  
 
 ### A. Data & Processing
 **UK Ownership Boundary**
@@ -39,7 +39,7 @@ This project compiles multiple data sources to develop a unique data set that co
   - File created on UKY GIS Support Data page - September 29, 2021
   - Downloaded on February 2, 2022 as shapefiles	- Consists of: UK Buildings, Pavement, Road Centerline, Acquisition Boundary
   - Downloaded shapefile in projection NAD 1983 StatePlane Kentucky FIPS 1600 (US Feet) --> converted projection to WGS 1984, 4326, EPSG using Geoprocessing ArcPro 'Project Tool' 
-  - - Converted shapefile to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
+   - Converted shapefile to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
   - The information contained in this file is from multiple data sources maintained by the University of Kentucky’s ITS Information Services
 
 **Fayette County Parcel Data**
@@ -49,7 +49,7 @@ This project compiles multiple data sources to develop a unique data set that co
   - Downloaded on February 2, 2022 as a shapefile
   - Downloaded shapefile in WGS 1984, 4326, EPSG
   - Converted shapefile to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
-  - Clipped parcel data to the UK Acquisition layer (UK Basemap Features) using the ArcPro Geoprocessing Tool 'Clip Layer' to reduce size of data 
+  - Clipped parcel data to the UK Ownership layer (UK Basemap Features) using the ArcPro Geoprocessing Tool 'Clip Layer' to reduce size of data 
   - Credits: LFUCG GIS, LFUCG Addressing, LFUCG Planning, Fayette County Property Valuation Administrator (PVA)
 
 **Historic UK Parcel CAD Data**
@@ -57,29 +57,28 @@ This project compiles multiple data sources to develop a unique data set that co
   - Original data was developed using existing deed and plat information - NOT SURVEY QUALITY 
   - Parcel attributes were taken from the deeds and/or existing subdivision plats
   - Data is not complete and only shows parcels as described when they were conveyed to UK and does not show subsequent sales for road widening, easements, etc.
-  - Converted CAD to GDB using the ArcPro Geoprocessing Tool 'CAD to Geodatabase'
-  - CAD data was not in a projected space, assigned the converted data a  projection NAD 1983 StatePlane Kentucky FIPS 1600 (US Feet)
-  - "Georeferenced" converted CAD data to the UK Campus Basemap using the Geoprocessing ArcPro Tool 'Transform Features'- created links between the converted CAD data and GIS campus basemap (see images below)
-  - Converted georeferenced CAD Annotations to a point feature class using the Geoprocessing ArcPro Tool 'Feature to Point' 
   
   ![Historic CAD source](images/autocad_screenshot.jpg)
-  ![Historic CAD data converted to GIS](images/CAD_to_GIS_Links.jpg)
-  ![Historic parcel data overlaid GIS for feature development](images/Transform_Links.jpg)
 
 **UK Parcel Acquisition Data (NEW DATASET)**
 (UK ITS Information Services - Geospatial)
+  - Converted Historic UK Parcel CAD Data to GDB using the ArcPro Geoprocessing Tool 'CAD to Geodatabase'
+  - CAD data was not in a projected space, assigned the converted data a projection of WGS 1984, 4326, EPSG
+  - "Georeferenced" converted CAD data to the UK Campus Basemap using the Geoprocessing ArcPro Tool 'Transform Features'- created links between the converted CAD data and GIS campus basemap (see images below)
+  - Converted georeferenced CAD Annotations to a point feature class using the Geoprocessing ArcPro Tool 'Feature to Point' 
   - After georeferencing the Historic UK Parcel CAD data to the GIS UK basemap, created a new feature class (UK Parcel Acquisition) from the Fayette County Parcel data and added/edited new features from georeferenced Historic UK Parcels 
   - Combined the dataset attributes by performing a spatial join using the ArcPro Geoprocessing Tool 'Spatial Join', joined georeferenced CAD Annotation points to the new UK Parcel Acquisition layer that we were completely within a parcel feature
   - Assigned unique IDs by using the ArcPro Geoprocessing Tool 'Number Features'
   - Converted Features to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
+  ![Data processing methodology](images/data_process_readme.jpg)
 
 **UK Points of Interest - POI (NEW DATASET)**
 (UK ITS Information Services - Geospatial & UK Libraries - Explore UK)
+  - Projection WGS 1984, 4326, EPSG
   - Selected historic photos of UK campus from https://exploreuk.uky.edu/ that could be recaptured today ([Rephotography](#b-rephotography))
-  - Identified locations in historic photos based on key landmarks
+  - Identified locations in historic photos based on key landmarks and added points to a geoJson layer
   - Photos edited using Adobe Photoshop, sized to 2500 px, and exported as jpg files
   - Completed research for each point, see [References](#iv-references) for more details
-  - Converted Features to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
 
 ### B. Rephotography
 A large aspect of this project is the "rephotography" of several historic sites around campus. [Rephotography](https://en.wikipedia.org/wiki/Rephotography) is the act of repeat photography of the same site, with a time lag between the two images; a "then and now" view of a particular area. To achieve this I looked through several historic photos of UK campus from https://exploreuk.uky.edu/ and selected images that could be recaptured today based on building features and other surrounding landmarks. I researched each of the photograph sites and wrote quick blurbs about them to further pull the user into the context of the location and get a deeper experience with the images.
@@ -138,6 +137,8 @@ In the future I would like to have buildings update with the parcel time slider.
 - "History of the President's Residence, Maxwell Place." UK Office of the President, https://pres.uky.edu/history-maxwell-place-presidents-residence. Accessed 2022.
 
 - Jones-Timoney, Amy, and Kody Kiser. "VIDEO: E.S. Good Barn Connects UK Campus With the Commonwealth." UKNOW - University of Kentucky News, January 20, 2015, https://uknow.uky.edu/campus-news/video-es-good-barn-connects-uk-campus-commonwealth.
+
+- "Kentucky University at Ashland." The Henry Clay Estate - Ashland, https://henryclay.org/mansion-grounds/history-of-ashland/kentucky-university-at-ashland/. Accessed 2022. 
 
 - "Mathews family papers." UK Libraries: Special Collections Research Center, https://exploreuk.uky.edu/fa/findingaid/?id=xt76q52f925g. Accessed 2022. 
 
