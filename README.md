@@ -6,12 +6,14 @@
   - [II. Methodology](#ii-methodology)
     - [A. Data & Processing](#a-data--processing)
     - [B. Rephotography](#b-rephotography)
-    - [C. Design - Application Layout](#c-design---application-layout)
+    - [C. Interface Design](#c-interface-design)
     - [D. Technology Stack](#d-technology-stack)
   - [III. Conclusion](#iii-conclusion)
   - [IV. References](#iv-references)
 
 <!-- /TOC -->
+
+*NOTE: My project examines the campus expansion of the University of Kentucky (UK) and its history. I am only examining the UK Lexington Main Campus located off of Nicholasville Road, not other properties around te city, county, or state. I also want to denote that UK has had various name changes since its founding but for simplicity sakes I will just be referring to the university as UK.*
 
 ![Original Campus](images/original_campus.jpg)
 
@@ -24,14 +26,12 @@ UK separated from the private Kentucky University (Transylvania University today
 ![Historic CAD source](images/ashland_campus.jpg)
   **[University of Kentucky historical map, showing the Ashland and Limestone campuses from 1862-1882](https://exploreuk.uky.edu/catalog/xt7rn872zc2f)**
 
-In my current position with UK Information Services group, I work closely with Facilities Management and Library datasets. Prior to development of this interactive map, older property deed details were fairly inaccessible and could only be located by searching through physical deeds in the Facilities Library. More recent parcel data can be obtained from LFUCG PVA; but the PVA merged older sections of campus into large parcels, instead of showing the original parcel size the property was purchased at. We have some historic parcel data in a CAD DWG document that was being maintained by an individual in Facilities Management, but it is not in an easily accessible format or location. As a part of this project I geospatially referenced and digitized the data from the CAD document so it could be used as a layer for this interactive map. I created this map to allow users to easily explore UK parcel details and how campus has grown, while also examining how the campus landscape has changed over the decades through rephotography images. 
+In my current position with UK Information Services group, I work closely with Facilities Management and Library datasets. Prior to development of this interactive map, older property deed details were fairly inaccessible and could only be located by searching through physical deeds in the Facilities Library. More recent parcel data can be obtained from LFUCG PVA; but the PVA merged older sections of campus into large parcels, instead of showing the original parcel size the property was purchased at. We have some historic parcel data in a CAD DWG document that was being maintained by an individual in Facilities Management, but it is not in an easily accessible format or location. For this project I geospatially referenced and digitized the data from the CAD document so it could be used as a layer for this interactive map. I created this map to allow users to easily explore UK parcel details and how campus has grown, while also examining how the campus landscape has changed over the decades through rephotography images. 
 
 ## II. Methodology
-This project combines modern PVA parcel data with historic UK property acquisitions to develop a unique dataset.  UK basemap features were provided from **[UK ITS Information Services - Geospatial](https://www.uky.edu/gissupport/sites/www.uky.edu.gissupport/files/Campus_Feature_Descriptions_0.pdf )**. Historic UK parcel data was provided by UK Facilities Management & UK ITS Information Services - Facilities Library. Modern Fayette County Parcel Data was sourced from **[Lexington Fayette Urban County Government (LFUCG)](https://data-lfucg.hub.arcgis.com/datasets/e4a525d8772741468205e82fc173db22_0/about)**. Points of Interest are based on selected historic photos of UK campus from UK Libraries **[Explore UKY](https://exploreuk.uky.edu/)**. Additional information about the data and processing methods can be found below.  
+This project combines modern PVA parcel data with historic UK property acquisitions to develop a unique dataset. It is important to note that I am only examining the UK Lexington Main Campus located off of Nicholasville Road, not other properties around Lexington or the state. UK basemap features were provided from **[UK ITS Information Services - Geospatial](https://www.uky.edu/gissupport/sites/www.uky.edu.gissupport/files/Campus_Feature_Descriptions_0.pdf )**. Historic UK parcel data was provided by UK Facilities Management & UK ITS Information Services - Facilities Library. Modern Fayette County Parcel Data was sourced from **[Lexington Fayette Urban County Government (LFUCG)](https://data-lfucg.hub.arcgis.com/datasets/e4a525d8772741468205e82fc173db22_0/about)**. Points of Interest are based on selected historic photos of UK campus from UK Libraries **[Explore UKY](https://exploreuk.uky.edu/)**. ArcGIS Pro was used to develop and process all datasets. Additional information about the data and processing methods can be found below.  
 
 ### A. Data & Processing
-**UK Ownership Boundary**
-(UK ITS Information Services - Geospatial)
 
 **UK Basemap Features**
 (UK ITS Information Services - Geospatial)
@@ -70,6 +70,9 @@ This project combines modern PVA parcel data with historic UK property acquisiti
   - Assigned unique IDs by using the ArcPro Geoprocessing Tool 'Number Features'
   - Converted Features to a geoJSON using the ArcPro Geoprocessing Tool 'Features to JSON'
   ![Data processing methodology](images/data_process_readme.jpg)
+  ![Spatial Join Infographic](https://datavisdotblog.files.wordpress.com/2022/01/spatial-joins-header.png)
+
+    **[Spatial Join Infographic](https://datavis.blog/2022/01/06/spatial-joins-in-tableau/)**
 
 **UK Points of Interest - POI (NEW DATASET)**
 (UK ITS Information Services - Geospatial & UK Libraries - Explore UK)
@@ -84,17 +87,18 @@ A large aspect of this project is the "rephotography" of several historic sites 
 
 ![Rephotography snapshot of Taylor Education Building](images/rephotography_snapshot.jpg)
 
-### C. Design - Application Layout
-Create a full screen interactive map that will allow users to explore the history of campus expansion and relive history through various points of interest on campus. The map will include three separate layers: Parcels, Buildings, and Points of Interest (POI). 
+### C. Interface Design
+The goal of this product to to create a full screen interactive map that will allow users to explore the history of campus expansion and relive historic moments through various sites on campus. The map will include three separate layers: Parcels, Buildings, and Points of Interest (POI). 
+
+This interactive map was developed with a responsive web design to accommodate varying screen sizes and devices, but for the best user experience it is recommended to use a desktop application or larger mobile device. While it can be used on smaller mobile devices, the image comparison popups do not retain scale and distorts the images. The layout was developed using Bootstrap for website framework and layer toggling, jQuery for event handling and image comparison slider plugin, leaflet library for map functionality, and Mapbox for basemap tile layer. 
 
 User Interaction includes:
-- Search by Parcel Address, Deed Address, Grantor, or Point of Interest 
-- Timeslider starts with the initial acquisition of campus from Lexington, and show additional parcels as they were purchased to 2022
-- Deed Information pop-up - information on deed from UK Parcel Acquisition Data layer
-- Point of interest pop-up - name of location and a historic photo from that area with a description. When a feature is clicked a modal window with image comparison slider will open, allowing users to compare historic images to the location today. 
-- Layer List toggle parcels, buildings, points of interest, current aerial imagery 
-- Info button
-- Zoom control 
+- Parcel/Deed Layer - the parcel layer is symbolized by light blue polygons, when the user hovers over a parcel the polygon outline will change to yellow and a pop-up will appear. The pop-up include information about each deed: grantor, deed book, deed book page, deed date, address if known, and the PVA number and address. 
+- Point of Interest (POI) Layer & Image Comparison Modal- the point of interest sites are symbolized by orange circles, when the user hovers hovers over one of these points a pop-up will display showing the historic image and site name for comparison. When a point is clicked a modal window with an image comparison slider will open, allowing users to compare the historic images to the location today. 
+- Timeslider - map opens showing all owned parcels/property, the timeslider can be used to watch how the Lexington main campus has changed since its opening in 1880 to today 2022. Points of Interest are not filtered with the date slider, did not find the dates associated with the image reliable enough. 
+- Layer List - the user has the capability to toggle on/off the parcels, points of interest, or buildings.
+- Links to the github repo ReadMe ('About') and my portfolio ('Portfolio'). 
+- 
 
 ![Interactive Parcel Ownership Map](images/parcelownership_wireframe.jpg)
 
@@ -109,9 +113,9 @@ User Interaction includes:
 
 ## III. Conclusion
 
-Provide a brief (one or two paragraphs) statement to conclude the proposal. This will likely be restating what you said in the introduction, but also (re)consider the format we used in the first assignment (a topic with a motivating question).
+UK's campus is ever changing, it is interesting to see how the University has grown since its founding in 1865. Through this project I learned so many little facts about campus that make my walks through campus a bit more inspiring than just seeing a bunch of buildings. I hope this map engages users with the history of UK's campus and helps them gain a better understanding of how campus got to where it is today and where it may go in the future. 
 
-In the future I would like to have buildings update with the parcel time slider. We have all the information to achieve this but the pop-ups between the parcel and building polygons conflict with each other and at some points will not allow you to select smaller parcels under buildings. I am considering removing pop-ups from the parcel data and adding pop-ups for the buildings. THe general public would not find the parcel details valuable, only valuable for FM personnel. I would also like to add a Road Ownership layer. Lastly improve the for mobile use, I would like the image modal content to adjust dynamically with screen sizes. Create a scrollable story map with a some background information and discuss the importance of parcel data.
+Later, I would like to have buildings update with the parcel time slider. We have all the information to achieve this but the pop-ups between the parcel and building polygons conflict with each other and at some points will not allow you to select smaller parcels under buildings. I am considering removing pop-ups from the parcel data and adding pop-ups for the buildings. The general public would not find the parcel details valuable, only valuable for FM personnel. I would also like to add a Road Ownership layer. Lastly improve for mobile use, I would like the image modal content to adjust dynamically with smaller screen sizes. Possibly create a scrollable story map with a some background information and discuss the importance of parcel data to go along with the interactive map. 
 
 ## IV. References
 
@@ -151,41 +155,3 @@ In the future I would like to have buildings update with the parcel time slider.
 
 - "University of Kentucky Army ROTC History." UK College of Arts & Sciences: Army ROTC, https://armyrotc.as.uky.edu/university-kentucky-army-rotc-history. Accessed 2022. 
 
-
-
-
-Recommended (15 min) presentation format for students:
-
-Introduce your topic and your motivation for the project. Begin with a screen share of your GitHub repository and rely on this as visuals as you discuss your project. Demonstrate the GitHub repo project documentation. I recommend not creating additional Powerpoint slides as it can become awkward switching between slides and your project (minutes 1 - 3 ). You can return to your GitHub documentation throughout your talk.
-
-Describe your target user and their motivations/objectives for using the map (minutes 3 - 4). Show your mockups, talk about your creative process.
-
-Discuss the data (source, quality, and concerns) and your data wrangling process. Show off your Python scripting within the Jupyter notebook (minutes 4 - 6). Don't go overly into the details of the coded cells, but quickly scroll through a notebook (or two) and talk about how that process helped you gain more of an understanding of the data and now provides for transparency and reproducibility in the data pipeline (minutes 8 - 9).
-
-Walk us through a live use case scenario using the map. Return to the target user. Explain the various interface components and how the user will employ them to fulfill their objectives. Discuss any insights or questions raised through visualizing the data within a map (minutes 9 - 12).
-
-Conclude with any features, functionality, or design aspects you'd like to attend to or improve upon for the final week (a "wish list"). Also discuss any new or unresolved questions in the data-to-web map pipeline. Where do you go from here? (minutes 12 - 15)
-
-Pitch your presentation toward a general academic audience:
-- Define technical terms and technologies, especially before you start to use them.
-- Assume nothing is obvious, especially technical terms.
-- If you show code or technical output, don’t go into detail. Use it as a visual while you explain the higher-level process or solution it refers to.
-  
-Structure the parts of your presentation with signposting:
-- Tell the user what you’re going to tell them
-- Tell it to them, and 
-- then tell them what you just told them. 
-- E.g., “I am first going to introduce the topic of my map and explain the anticipated user’s motivations and objectives for using the map … bla bla bla bla … I just told you about the subject matter of my map and the user’s motivations and objectives. Now I’m going to demonstrate the map and user interface … bla bla bla … I just demonstrated the map and the user interface. Now I’m going to describe the data process and show you how I used Jupyter Notebooks to gain insights and wrangle the data.”
-
-How to end your presentation:
-- Return to the beginning and gesture toward broader impact. E.g., “This concludes my presentation about my mapping project focused on X. My project allows us to better understand Y phenomena in a spatial sense and users can do Z after engaging with the map.”
-- Conclude with a humorous/humanizing statement or image. E.g., “I’d like to thank my husband for enduring countless hours of me cursing and throwing things while debugging this map, and my doggo for not chewing through the power cords of my computer.”
-
-TIPS
-
-Slow down and take your time. No need to try to rush through every detail of your map.
-Scroll through a web page or README.md file of your repo slowly.
-If pointing out something specific, give the audience time to look at the map element/Notebook cell/etc.
-Demonstrate map user interaction slowly and avoid clicking around too quickly.
-When changing between browser windows or screens, pause before doing so. Let the audience know what you’re doing. E.g., “I’m now going to switch back to the map to demonstrate X.”
-When demoing the map or Jupyter notebook, emphasize insights from the data revealed through the visual representation and interaction. Tell the audience what they’re looking at. E.g., “Here you can see some outliers in the data, which should either be scrubbed or require further investigation.”
